@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     --color-strog-cyan: hsl(172, 67%, 45%);
 
@@ -10,9 +14,29 @@
 }
 
 body {
+    min-height: 100vh;
+
     font-family: "Space Mono", serif;
     font-weight: 400;
     font-style: normal;
+
+    background-color: var(--color-light-grayish-cyan, hsl(185, 41%, 84%));
+}
+
+.flex {
+    display: flex;
+}
+
+.calculator {
+
+}
+
+.calculator__form {
+
+}
+
+.calculator__result {
+
 }
 
 .attribution {
@@ -21,5 +45,5 @@ body {
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--color-very-dark-cyan, hsl(183, 100%, 15%));
 }
