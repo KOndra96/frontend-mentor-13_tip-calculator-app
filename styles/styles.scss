@@ -29,6 +29,10 @@ body {
     display: flex;
 }
 
+.grid {
+    display: grid;
+}
+
 body, main {
     flex-direction: column;
     justify-content: center;
@@ -62,6 +66,14 @@ body, main {
     input {
         padding: $calculator-buttons-padding;
     }
+
+    fieldset.flex {
+        flex-direction: column;
+    }
+
+    fieldset .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }  
 }
 
 .calculator__result {
@@ -87,7 +99,7 @@ body, main {
     // align-items: center;
 }
 
-.calculator__result__per-person {
+.calculator__result__per-person, .calculator__result__total {
     margin-bottom: 2rem;
 }
 
@@ -109,6 +121,8 @@ body, main {
     
     padding: $calculator-buttons-padding;
 
+    border-radius: 0.25rem;
+
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -116,6 +130,16 @@ body, main {
 
     color: var(--color-very-dark-cyan, hsl(183, 100%, 15%));
     background-color: var(--color-strong-cyan, hsl(172, 67%, 45%));
+}
+
+.calculator__form__part {
+    margin-bottom: 2rem;
+}
+
+input, .choice, #calculator__reset-button {
+    &:hover, &:focus {
+        cursor: pointer;
+    }
 }
 
 @media screen and (min-width: 620px) {

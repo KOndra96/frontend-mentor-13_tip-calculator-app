@@ -26,26 +26,43 @@
     <div class="flex calculator">
       <form action="#" class="calculator__form">
 
-        <label for="calculator__bill">Bill</label>
-        <input type="number" name="bill" id="calculator__bill">
-
-        <fieldset class="calculator__tip">
-          <legend>Select Tip %</legend>
-          <label for="calculator__tip-five">5%</label>
-          <input type="radio" name="tip-percent" value="5" id="calculator__tip-five">
-          <label for="calculator__tip-ten">10%</label>
-          <input type="radio" name="tip-percent" value="10" id="calculator__tip-ten">
-          <label for="calculator__tip-fifteen">15%</label>
-          <input type="radio" name="tip-percent" value="15" id="calculator__tip-fifteen">
-          <label for="calculator__tip-twenty-five">25%</label>
-          <input type="radio" name="tip-percent" value="25" id="calculator__tip-twenty-five">
-          <label for="calculator__tip-fifty">50%</label>
-          <input type="radio" name="tip-percent" value="50" id="calculator__tip-fifty">
-          <input type="number" name="tip-custom" id="calculator__tip-custom" placeholder="Custom">
+        <fieldset class="flex">
+          <label for="calculator__bill">Bill</label>
+          <input type="number" name="bill" id="calculator__bill" class="calculator__form__part">
         </fieldset>
 
-        <label for="calculator__people">Number of People</label>
-        <input type="number" name="people" id="calculator__people">
+        <fieldset class="calculator__tip calculator__form__part">
+          <legend>Select Tip %</legend>
+          <div class="grid">
+            <div class="choice">
+              <label for="calculator__tip-five">5%</label>
+              <input type="radio" name="tip-percent" value="5" id="calculator__tip-five">
+            </div>
+            <div class="choice">
+              <label for="calculator__tip-ten">10%</label>
+              <input type="radio" name="tip-percent" value="10" id="calculator__tip-ten">
+            </div>
+            <div class="choice">
+              <label for="calculator__tip-fifteen">15%</label>
+              <input type="radio" name="tip-percent" value="15" id="calculator__tip-fifteen">
+            </div>
+            <div class="choice">
+              <label for="calculator__tip-twenty-five">25%</label>
+              <input type="radio" name="tip-percent" value="25" id="calculator__tip-twenty-five">
+            </div> 
+            <div class="choice">
+              <label for="calculator__tip-fifty">50%</label>
+              <input type="radio" name="tip-percent" value="50" id="calculator__tip-fifty">
+            </div>
+            <div class="choice">
+              <input type="number" name="tip-custom" id="calculator__tip-custom" placeholder="Custom">
+            </div>
+          </div>
+          </fieldset>
+        <fieldset class="flex">
+          <label for="calculator__people">Number of People</label>
+          <input type="number" name="people" id="calculator__people"  class="calculator__form__part">
+        </fieldset>
       </form>
       <div class="flex calculator__result">
         <div class="calculator__result__numbers">

@@ -24,6 +24,10 @@ body {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 body, main {
   flex-direction: column;
   justify-content: center;
@@ -51,6 +55,12 @@ body, main {
 .calculator__form input {
   padding: 0.5rem;
 }
+.calculator__form fieldset.flex {
+  flex-direction: column;
+}
+.calculator__form fieldset .grid {
+  grid-template-columns: repeat(3, 1fr);
+}
 
 .calculator__result {
   flex-direction: column;
@@ -69,7 +79,7 @@ body, main {
   justify-content: space-between;
 }
 
-.calculator__result__per-person {
+.calculator__result__per-person, .calculator__result__total {
   margin-bottom: 2rem;
 }
 
@@ -87,12 +97,21 @@ body, main {
 #calculator__reset-button {
   width: 100%;
   padding: 0.5rem;
+  border-radius: 0.25rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--color-very-dark-cyan, hsl(183, 100%, 15%));
   background-color: var(--color-strong-cyan, hsl(172, 67%, 45%));
+}
+
+.calculator__form__part {
+  margin-bottom: 2rem;
+}
+
+input:hover, input:focus, .choice:hover, .choice:focus, #calculator__reset-button:hover, #calculator__reset-button:focus {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 620px) {
