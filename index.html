@@ -19,10 +19,10 @@
   <script defer src="./js/script.js"></script>
 </head>
 
-<body>
+<body class="flex">
 
-  <main>
-    <img src="./images/logo.svg" alt="Logo">
+  <main class="flex">
+    <img src="./images/logo.svg" alt="Logo" class="page-logo">
     <div class="flex calculator">
       <form action="#" class="calculator__form">
 
@@ -41,31 +41,32 @@
           <input type="radio" name="tip-percent" value="25" id="calculator__tip-twenty-five">
           <label for="calculator__tip-fifty">50%</label>
           <input type="radio" name="tip-percent" value="50" id="calculator__tip-fifty">
-          <label for="calculator__tip-custom">Custom</label>
-          <input type="number" name="tip-custom" id="calculator__tip-custom">
+          <input type="number" name="tip-custom" id="calculator__tip-custom" placeholder="Custom">
         </fieldset>
 
         <label for="calculator__people">Number of People</label>
         <input type="number" name="people" id="calculator__people">
       </form>
-      <div class="calculator__result">
-        <div class="calculator__result__per-person">
-          <p>
-            <span class="calculator__result--important-text">Tip amount</span> / person
-          </p>
-          <p class="calculator__result__amount">
-            $4.27
-          </p>
+      <div class="flex calculator__result">
+        <div class="calculator__result__numbers">
+          <div class="flex calculator__result__per-person">
+            <p>
+              <span class="calculator__result__important-text">Tip amount</span><br>/ person
+            </p>
+            <p class="calculator__result__amount">
+              $4.27
+            </p>
+          </div>
+          <div class="flex calculator__result__total">
+            <p>
+              <span class="calculator__result__important-text">Total</span><br>/ person
+            </p>
+            <p class="calculator__result__amount">
+              $32.79
+            </p>
+          </div>
         </div>
-        <div class="calculator__result__total">
-          <p>
-            <span class="calculator__result--important-text">Total</span> / person
-          </p>
-          <p class="calculator__result__amount">
-            $32.79
-          </p>
-        </div>
-        <a href="#" class="calculator__reset-button">Reset</a>
+        <a href="#" id="calculator__reset-button">Reset</a>
       </div>
     </div>
   </main>

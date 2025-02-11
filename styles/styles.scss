@@ -3,7 +3,7 @@
 }
 
 :root {
-    --color-strog-cyan: hsl(172, 67%, 45%);
+    --color-strong-cyan: hsl(172, 67%, 45%);
 
     --color-very-dark-cyan: hsl(183, 100%, 15%);
     --color-dark-grayish-cyan: hsl(186, 14%, 43%);
@@ -12,6 +12,8 @@
     --color-very-light-grayish-cyan: hsl(189, 41%, 97%);
     --color-white: hsl(0, 0%, 100%);
 }
+
+$calculator-buttons-padding: 0.5rem;
 
 body {
     min-height: 100vh;
@@ -27,19 +29,95 @@ body {
     display: flex;
 }
 
-.calculator {
+body, main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.page-logo {
+    max-width: 100%;
+
+}
+
+.calculator {
+    width: 100%;
+    max-width: 864px;
+
+    padding: 2rem;
+
+    border-radius: 1.5rem;
+
+    background-color: var(--color-white, hsl(0, 0%, 100%));
 }
 
 .calculator__form {
+    width: 55%;
 
+    input {
+        padding: $calculator-buttons-padding;
+    }
 }
 
 .calculator__result {
+    flex-direction: column;
+    justify-content: space-between;
 
+    width: 45%;
+
+    margin-left: 2rem;
+    padding: 2rem;
+
+    border-radius: 1rem;
+
+    color: var(--color-grayish-cyan, hsl(184, 14%, 56%));
+    background-color: var(--color-very-dark-cyan, hsl(183, 100%, 15%));
+
+    p {
+        margin: 0;
+    }
+}
+
+.calculator__result__per-person, .calculator__result__total {
+    justify-content: space-between;
+    // align-content: center;
+    // align-items: center;
+}
+
+.calculator__result__per-person {
+    margin-bottom: 2rem;
+}
+
+.calculator__result__important-text {
+    font-weight: 700;
+
+    color: var(--color-white, hsl(0, 0%, 100%));
+}
+
+.calculator__result__amount {
+    font-size: 32px;
+    font-weight: 700;
+
+    color: var(--color-strong-cyan, hsl(172, 67%, 45%));
+}
+
+#calculator__reset-button {
+    width: 100%;
+    
+    padding: $calculator-buttons-padding;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    color: var(--color-very-dark-cyan, hsl(183, 100%, 15%));
+    background-color: var(--color-strong-cyan, hsl(172, 67%, 45%));
 }
 
 .attribution {
+    margin-top: 1rem;
+
     font-size: 11px;
     text-align: center;
 }
