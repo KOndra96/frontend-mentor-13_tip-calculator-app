@@ -65,6 +65,10 @@ body, main {
 
     input {
         padding: $calculator-buttons-padding;
+
+        &[type="number"] {
+            width: 100%; 
+        }
     }
 
     fieldset.flex {
@@ -72,7 +76,7 @@ body, main {
     }
 
     fieldset .grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }  
 }
 
@@ -162,6 +166,10 @@ input, .choice, #calculator__reset-button {
 
     .calculator__form {
         width: 55%;
+
+        fieldset .grid {
+            grid-template-columns: repeat(3, 1fr);
+        }  
     }
     
 }

@@ -55,11 +55,14 @@ body, main {
 .calculator__form input {
   padding: 0.5rem;
 }
+.calculator__form input[type=number] {
+  width: 100%;
+}
 .calculator__form fieldset.flex {
   flex-direction: column;
 }
 .calculator__form fieldset .grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .calculator__result {
@@ -129,6 +132,9 @@ input:hover, input:focus, .choice:hover, .choice:focus, #calculator__reset-butto
   }
   .calculator__form {
     width: 55%;
+  }
+  .calculator__form fieldset .grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .attribution {
